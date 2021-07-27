@@ -724,6 +724,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^2.23.0":
+  version: 2.23.0
+  resolution: "date-fns@npm:2.23.0"
+  checksum: 485216d550255a548552db16379e7a5cd440e262b90fbdc0362f63ee71d0e74bd00ce29ca8d76b343f6df36c1ecb6f22edba0b72848a4c32674e755619695c1f
+  languageName: node
+  linkType: hard
+
 "debug@npm:^4.0.1, debug@npm:^4.1.1, debug@npm:^4.3.1":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
@@ -1334,6 +1341,7 @@ __metadata:
     "@types/node": ^14.11.2
     "@types/react": ^17.0.15
     csv-parser: ^3.0.0
+    date-fns: ^2.23.0
     gts: ^3.1.0
     immutability-helper: ^3.1.1
     ink: ^3.0.9
