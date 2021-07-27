@@ -69,11 +69,7 @@ function entryToConcept(entry: Entry): any {
   }
 
   const designations: Designation[] = [];
-  const designationFieldPrefixes = [
-    'Term 1',
-    'Term 2',
-    'Term 3',
-  ];
+  const designationFieldPrefixes = ['Term 1', 'Term 2', 'Term 3'];
   for (const prefix of designationFieldPrefixes) {
     const fnames = Object.entries(entry).filter(
       ([fieldname, value]) =>
@@ -105,7 +101,9 @@ function entryToConcept(entry: Entry): any {
     localizedID: uuidv5(JSON.stringify(entry), localizedNSUUID),
     identifier: entry['Human-readable identifier'],
     definition: entry['Definition'],
-    dateAccepted: entry['Date accepted'] ? toDate(parseISO(entry['Date accepted'])) : new Date(),
+    dateAccepted: entry['Date accepted']
+      ? toDate(parseISO(entry['Date accepted']))
+      : new Date(),
     designations,
     examples,
     notes,
