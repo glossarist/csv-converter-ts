@@ -58,6 +58,8 @@ install dependencies and build the site, after which you can serve it locally:
 % python3 -m http.server 8000
 --
 
+(Navigate to `http://localhost:8000/` in your favorite browser.)
+
 == CSV structure
 
 NOTE: For a sample file, refer to `sample/glossary.csv`.
