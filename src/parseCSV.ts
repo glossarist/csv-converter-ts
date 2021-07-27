@@ -105,7 +105,7 @@ function entryToConcept(entry: Entry): any {
     localizedID: uuidv5(JSON.stringify(entry), localizedNSUUID),
     identifier: entry['Human-readable identifier'],
     definition: entry['Definition'],
-    dateAccepted: toDate(parseISO(entry['Date accepted'])),
+    dateAccepted: entry['Date accepted'] ? toDate(parseISO(entry['Date accepted'])) : new Date(),
     designations,
     examples,
     notes,
