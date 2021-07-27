@@ -77,7 +77,7 @@ function entryToConcept(entry: Entry): any {
     );
     if (fnames.length > 0) {
       const designation = {
-        designation: entry[`${prefix} as text` as keyof Entry],
+        designation: entry[`${prefix} designation` as keyof Entry],
         type: entry[`${prefix} type` as keyof Entry],
         partOfSpeech:
           entry[`${prefix} part of speech` as keyof Entry] || undefined,
