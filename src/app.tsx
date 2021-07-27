@@ -42,8 +42,6 @@ const STEP_SEQUENCE = [
   'ensuremeta',
   'countitems',
   'processitems',
-  'initializepaneronmeta',
-  'generatehtml',
 ] as const;
 
 type StepID = typeof STEP_SEQUENCE[number];
@@ -78,14 +76,6 @@ const App: React.FC<Record<never, never>> = function () {
     },
     processitems: {
       label: 'processing CSV data',
-      state: 'pending',
-    },
-    initializepaneronmeta: {
-      label: 'initializing Paneron repository & dataset metadata',
-      state: 'pending',
-    },
-    generatehtml: {
-      label: 'rendering HTML output',
       state: 'pending',
     },
   });
