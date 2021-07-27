@@ -21,7 +21,7 @@ invoke the script as follows:
 
 [source,console]
 --
-% npx glossarist-csv-converter -l <language_code> -i <glossary_id> -d <domain_name> </path/to/file.csv> -o </repository/container/directory>
+% npx @riboseinc/glossarist-csv-converter -l <language_code> -i <glossary_id> -d <domain_name> </path/to/file.csv> -o </repository/container/directory>
 --
 
 Where:
