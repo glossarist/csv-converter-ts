@@ -28,7 +28,7 @@ Where:
 
 . Language code is expected to be a three-letter ISO 639-2/T code (“eng” for English).
 . Glossary ID can be a descriptive alphanumeric string without spaces.
-. Glossary URL is a full URL (e.g., `https://some-glossary.com/`) where the glossary will be deployed.
+. Domain name at which the glossary will be deployed.
 Note that the glossary must be deployed at domain root currently.
 
 === Preparing the infrastructure
