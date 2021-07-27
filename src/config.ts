@@ -1,12 +1,12 @@
-import minimist, {ParsedArgs} from 'minimist';
+import minimist from 'minimist';
 
-interface RawArguments {
-  _: string[];
-  o: string;
-  l: string;
-  i: string;
-  d: string;
-}
+// interface RawArguments {
+//   _: string[];
+//   o: string;
+//   l: string;
+//   i: string;
+//   d: string;
+// }
 
 export interface Configuration {
   inputCSVPath: string;
