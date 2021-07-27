@@ -62,23 +62,36 @@ NOTE: For a sample file, refer to `sample/glossary.csv`.
 
 The fields are as follows:
 
-. Human-readable identifier (required): a string
-. Date accepted
-. Definition: plain text, with possible AsciiMath
+. Human-readable identifier *(required)*: a string
+. Date accepted (default is now)
+. Definition *(required)*: plain text, with possible AsciiMath
 . Note 1: plain text, with possible AsciiMath
 . Note 2: plain text, with possible AsciiMath
 . Note 3: plain text, with possible AsciiMath
 . Example 1: plain text, with possible AsciiMath
 . Example 2: plain text, with possible AsciiMath
 . Example 3: plain text, with possible AsciiMath
-. Authoritative source: reference to a standard (e.g., "ITU-R Recommendation 592")
-. Authoritative source: clause in the standard referenced (e.g., "4.4")
-. Authoritative source: link (URL) to the standard referenced
-. Designation 1 rendered as text
-. Designation 1 type: expression | symbol | prefix
-. Designation 1 part of speech (expressions only): noun | adjective | adverb | verb
-. Designation 1 grammatical number (nouns only): plural | singular | mass
-. Designation 1 gender (nouns only): masculine | feminine | common | neuter
-. Designation 1 participle marker (adjectives and adverbs only): participle (or empty)
-
-Designations 2, 3 will be treated as synonym terms.
+. Authoritative source reference (to a standard, e.g., "ITU-R Recommendation 592")
+. Authoritative source clause (in the standard referenced, e.g., "4.4")
+. Authoritative source link (URL, to the standard referenced)
+. Term 1 designation *(required)*: as text with possible AsciiMath
+. Term 1 type: expression | symbol | prefix
+. Term 1 part of speech (expressions only): noun | adjective | adverb | verb
+. Term 1 grammatical number (nouns only): plural | singular | mass
+. Term 1 gender (nouns only): common | feminine | masculine | neuter
+. Term 1 participle marker (adjectives and adverbs only): non-empty value for “true”
+. Term 1 abbreviation marker: non-empty value for “true”
+. Term 2 designation: as text with possible AsciiMath
+. Term 2 type: expression | symbol | prefix
+. Term 2 part of speech (expressions only): noun | adjective | adverb | verb
+. Term 2 grammatical number (nouns only): plural | singular | mass
+. Term 2 gender (nouns only): common | feminine | masculine | neuter
+. Term 2 participle marker (adjectives and adverbs only): non-empty value for “true”
+. Term 2 abbreviation marker: non-empty value for “true”
+. Term 3 designation: as text with possible AsciiMath
+. Term 3 type: expression | symbol | prefix
+. Term 3 part of speech (expressions only): noun | adjective | adverb | verb
+. Term 3 grammatical number (nouns only): plural | singular | mass
+. Term 3 gender (nouns only): common | feminine | masculine | neuter
+. Term 3 participle marker (adjectives and adverbs only): non-empty value for “true”
+. Term 3 abbreviation marker: non-empty value for “true”
