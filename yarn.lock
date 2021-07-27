@@ -103,6 +103,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@riboseinc/glossarist-csv-converter@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@riboseinc/glossarist-csv-converter@workspace:."
+  dependencies:
+    "@types/js-yaml": ^4.0.2
+    "@types/node": ^14.11.2
+    "@types/react": ^17.0.15
+    "@types/uuid": ^8.3.1
+    csv-parser: ^3.0.0
+    date-fns: ^2.23.0
+    gts: ^3.1.0
+    immutability-helper: ^3.1.1
+    ink: ^3.0.9
+    ink-task-list: ^1.1.0
+    js-yaml: ^4.1.0
+    minimist: ^1.2.5
+    react: ^17.0.2
+    typescript: ^4.0.3
+    uuid: ^8.3.2
+  bin:
+    glossarist-csv-converter: build/src/index.js
+  languageName: unknown
+  linkType: soft
+
 "@sindresorhus/is@npm:^0.14.0":
   version: 0.14.0
   resolution: "@sindresorhus/is@npm:0.14.0"
@@ -1347,30 +1371,6 @@ __metadata:
   checksum: d3e02d5e459e02ffa578b45f040381c33e3c0538ed99b958f0809230c423337999867d7b0dbf752ce93c46157d3bbf154d3fff988a93ccaeb627df8e1841775b
   languageName: node
   linkType: hard
-
-"glossarist-csv-converter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "glossarist-csv-converter@workspace:."
-  dependencies:
-    "@types/js-yaml": ^4.0.2
-    "@types/node": ^14.11.2
-    "@types/react": ^17.0.15
-    "@types/uuid": ^8.3.1
-    csv-parser: ^3.0.0
-    date-fns: ^2.23.0
-    gts: ^3.1.0
-    immutability-helper: ^3.1.1
-    ink: ^3.0.9
-    ink-task-list: ^1.1.0
-    js-yaml: ^4.1.0
-    minimist: ^1.2.5
-    react: ^17.0.2
-    typescript: ^4.0.3
-    uuid: ^8.3.2
-  bin:
-    glossarist-csv-converter: build/src/index.js
-  languageName: unknown
-  linkType: soft
 
 "got@npm:^9.6.0":
   version: 9.6.0
