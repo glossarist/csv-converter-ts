@@ -5,13 +5,14 @@ import {ReportingOpts} from './ReportingFunction';
 
 async function writePaneronMeta(
   repoPath: string,
+  repoName: string,
   datasetID: string
 ): Promise<string> {
   const metaPath = path.join(repoPath, 'paneron.yaml');
   const meta = {
-    title: datasetID,
+    title: repoName,
     datasets: {
-      [datasetID]: true,
+      glossary: true,
     },
   };
   fs.writeFileSync(metaPath, yaml.dump(meta, {noRefs: true}));
@@ -86,21 +87,21 @@ async function writeRegisterMeta(
 export default async function ensureMeta(
   {onOutput}: ReportingOpts,
   repoPath: string,
-  datasetID: string,
+  glossaryID: string,
   langCode: string,
   domainName: string
 ): Promise<
   [universalSubregisterPath: string, localizedSubregisterPath: string]
 > {
   onOutput('Writing Paneron meta…');
-  const datasetPath = await writePaneronMeta(repoPath, datasetID);
+  const datasetPath = await writePaneronMeta(repoPath, glossaryID, 'glossary');
   onOutput('Writing dataset meta…');
   const paths = await writeGlossaristDatasetMeta(
     datasetPath,
-    datasetID,
+    glossaryID,
     langCode
   );
   onOutput('Writing register meta…');
-  await writeRegisterMeta(datasetPath, datasetID, `https://${domainName}`);
+  await writeRegisterMeta(datasetPath, glossaryID, `https://${domainName}`);
   return paths;
 }
