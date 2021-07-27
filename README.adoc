@@ -64,21 +64,21 @@ The fields are as follows:
 . Term 1 type: expression | symbol | prefix
 . Term 1 part of speech (expressions only): noun | adjective | adverb | verb
 . Term 1 grammatical number (nouns only): plural | singular | mass
-. Term 1 gender (nouns only): common | feminine | masculine | neuter
+. Term 1 grammatical gender (nouns only): common | feminine | masculine | neuter
 . Term 1 participle marker (adjectives and adverbs only): non-empty value for “true”
 . Term 1 abbreviation marker: non-empty value for “true”
 . Term 2 designation: as text with possible AsciiMath
 . Term 2 type: expression | symbol | prefix
 . Term 2 part of speech (expressions only): noun | adjective | adverb | verb
 . Term 2 grammatical number (nouns only): plural | singular | mass
-. Term 2 gender (nouns only): common | feminine | masculine | neuter
+. Term 2 grammatical gender (nouns only): common | feminine | masculine | neuter
 . Term 2 participle marker (adjectives and adverbs only): non-empty value for “true”
 . Term 2 abbreviation marker: non-empty value for “true”
 . Term 3 designation: as text with possible AsciiMath
 . Term 3 type: expression | symbol | prefix
 . Term 3 part of speech (expressions only): noun | adjective | adverb | verb
 . Term 3 grammatical number (nouns only): plural | singular | mass
-. Term 3 gender (nouns only): common | feminine | masculine | neuter
+. Term 3 grammatical gender (nouns only): common | feminine | masculine | neuter
 . Term 3 participle marker (adjectives and adverbs only): non-empty value for “true”
 . Term 3 abbreviation marker: non-empty value for “true”
 
