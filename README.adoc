@@ -29,8 +29,9 @@ Where:
 . Paths can be relative.
 . Language code is expected to be a three-letter ISO 639-2/T code (“eng” for English).
 . Glossary ID can be a descriptive alphanumeric string without spaces.
-. Domain name should match where the registry will be deployed (`uniformResourceIdentifier` per ISO 19135-1).
-Note that the glossary must be deployed at domain root currently.
+. Domain name should match the domain at which the registry will be made accessible
+(`uniformResourceIdentifier` per ISO 19135-1).
+Note that the glossary can only be deployed at domain root currently.
 . Repository root will be created at `/repository/container/directory/glossary_id`; it must not exist
 (but container directory must)
 
