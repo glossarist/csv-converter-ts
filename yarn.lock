@@ -2455,17 +2455,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-reconciler@npm:^0.24.0":
-  version: 0.24.0
-  resolution: "react-reconciler@npm:0.24.0"
+"react-reconciler@npm:0.20.0":
+  version: 0.20.0
+  resolution: "react-reconciler@npm:0.20.0"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
     prop-types: ^15.6.2
-    scheduler: ^0.18.0
+    scheduler: ^0.13.2
   peerDependencies:
     react: ^16.0.0
-  checksum: c9c74208325a940ca36e031b71499f6d8e62e96ee673d69e35cc9e6a661aa746a2b0750f2ffcd1bae0a29eaf3d127dc8197ab7e801e6a3a2ab7d45a71b464630
+  checksum: eb224c8f565c59293bb729aeb7c4acec63ccbb8937ec44691cf53af63da6bd4ec149c10500eca97459a359aa958e8363a0911695aa4da0e30182d960e5e44b8c
   languageName: node
   linkType: hard
 
@@ -2640,13 +2640,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.18.0":
-  version: 0.18.0
-  resolution: "scheduler@npm:0.18.0"
+"scheduler@npm:0.13.2":
+  version: 0.13.2
+  resolution: "scheduler@npm:0.13.2"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-  checksum: b6e0b9e0086b200b114f1ef7f9fcac966ad5d84cd3b1867174be0549d3ff713d1fd22d5574cb024b7d3eadf3307f2afc1cb5bfbf28b0d3bc34b200183800fcae
+  checksum: 284ed51340f1f6e95300e20f8375238949ebd82f161dc43b72901232726d92569767f8e267b1893affe0b623d02caf42a1275d45ea81b2310c191b7b4a8d769b
   languageName: node
   linkType: hard
 

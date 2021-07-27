@@ -6,6 +6,10 @@
   "author": "Ribose Inc. <open.source@ribose.com>",
   "version": "0.0.4",
   "license": "MIT",
+  "resolutions": {
+    "react-reconciler": "0.20.0",
+    "scheduler": "0.13.2"
+  },
   "dependencies": {
     "csv-parser": "^3.0.0",
     "date-fns": "^2.23.0",
