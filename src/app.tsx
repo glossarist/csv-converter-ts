@@ -18,9 +18,9 @@ const ensureRepoDirectory = async function (
   if (container === '' || glossaryID === '') {
     throw new Error('Empty glossary ID or container directory');
   }
-  const finalPath = path.join(container, glossaryID);
-  fs.mkdirSync(finalPath);
-  return finalPath;
+  const repoPath = path.join(container, glossaryID);
+  fs.mkdirSync(repoPath);
+  return repoPath;
 };
 
 const countItems = async function (
