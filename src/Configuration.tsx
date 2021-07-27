@@ -58,9 +58,7 @@ const ConfigParam: React.FC<{
             (
             {errs.map((err, idx) => (
               <React.Fragment key={idx}>
-                <Text color="red">
-                  {err}
-                </Text>
+                <Text color="red">{err}</Text>
                 {idx === errs.length ? ', ' : null}
               </React.Fragment>
             ))}
