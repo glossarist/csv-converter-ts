@@ -4,7 +4,25 @@
     "rootDir": ".",
     "outDir": "build",
     "jsx": "react",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+
+    "sourceMap": true,
+    "inlineSources": true,
+
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+
+    "newLine": "lf",
+
+    "declaration": true,
   },
   "include": [
     "src/**/*.ts",
