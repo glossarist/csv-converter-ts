@@ -4,8 +4,8 @@ import React from 'react';
 import {render} from 'ink';
 import App from './App';
 
-function test() {
+function main() {
   render(<App />);
 }
 
-test();
+main();
