@@ -59,7 +59,7 @@ export default async function processItems(
   universalSubregisterPath: string,
   localizedSubregisterPath: string,
   langID: string,
-  itemCount: number
+  itemCount?: number
 ): Promise<void> {
   const i = 1;
   for await (const concept of parseCSV(csvPath)) {
@@ -71,6 +71,8 @@ export default async function processItems(
       langID
     );
     onOutput(`wrote YAML for concept ${i}`);
-    onProgress(itemCount, i);
+    if (itemCount) {
+      onProgress(itemCount, i);
+    }
   }
 }
