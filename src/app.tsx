@@ -23,13 +23,6 @@ const ensureRepoDirectory = async function (
   return repoPath;
 };
 
-const countItems = async function (
-  _: ReportingOpts,
-  filePath: string
-): Promise<number> {
-  return 2;
-};
-
 interface Step {
   label: string;
   state: 'pending' | 'loading' | 'success' | 'warning' | 'error';
@@ -40,7 +33,6 @@ interface Step {
 const STEP_SEQUENCE = [
   'ensuredir',
   'ensuremeta',
-  'countitems',
   'processitems',
 ] as const;
 
@@ -68,10 +60,6 @@ const App: React.FC<Record<never, never>> = function () {
     },
     ensuremeta: {
       label: 'adding Paneron repository & dataset meta',
-      state: 'pending',
-    },
-    countitems: {
-      label: 'counting CSV lines to import',
       state: 'pending',
     },
     processitems: {
@@ -131,19 +119,12 @@ const App: React.FC<Record<never, never>> = function () {
           config.domainName
         );
         if (paths) {
-          const itemCount = await completeStep(
-            'countitems',
-            countItems
-          )(config.inputCSVPath);
-          if (itemCount) {
-            await completeStep('processitems', processItems)(
-              config.inputCSVPath,
-              paths[0],
-              paths[1],
-              config.langCode,
-              itemCount
-            );
-          }
+          await completeStep('processitems', processItems)(
+            config.inputCSVPath,
+            paths[0],
+            paths[1],
+            config.langCode,
+          );
         }
       }
     })();
