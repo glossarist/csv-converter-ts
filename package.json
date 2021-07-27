@@ -3,6 +3,7 @@
   "packageManager": "yarn@3.0.0",
   "main": "src/index.tsx",
   "bin": "build/src/index.js",
+  "author": "Ribose Inc. <open.source@ribose.com>",
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
