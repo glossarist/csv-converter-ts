@@ -119,6 +119,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/js-yaml@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "@types/js-yaml@npm:4.0.2"
+  checksum: bdc4b45e116d34cc0669ee0a3eee96113b60bc0447c48cd7e99d5227b304a5c65c227e3e83271a3ff6e96c32e769c52e376e8c8310414a35984e0ec226cc9b8a
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:^7.0.7":
   version: 7.0.8
   resolution: "@types/json-schema@npm:7.0.8"
@@ -194,6 +201,13 @@ __metadata:
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
   checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^8.3.1":
+  version: 8.3.1
+  resolution: "@types/uuid@npm:8.3.1"
+  checksum: b41bdc5e86c6f0f1899306be10455636da0f2168c9489b869edd6837ddeb7c0e501b1ff7d857402462986bada2a379125743dd895fa801d03437cd632116a373
   languageName: node
   linkType: hard
 
@@ -1338,8 +1352,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "glossarist-csv-converter@workspace:."
   dependencies:
+    "@types/js-yaml": ^4.0.2
     "@types/node": ^14.11.2
     "@types/react": ^17.0.15
+    "@types/uuid": ^8.3.1
     csv-parser: ^3.0.0
     date-fns: ^2.23.0
     gts: ^3.1.0
@@ -1350,6 +1366,7 @@ __metadata:
     minimist: ^1.2.5
     react: ^17.0.2
     typescript: ^4.0.3
+    uuid: ^8.3.2
   bin:
     glossarist-csv-converter: build/src/index.js
   languageName: unknown
@@ -3072,6 +3089,15 @@ typescript@^4.0.3:
   dependencies:
     prepend-http: ^2.0.0
   checksum: 1040e357750451173132228036aff1fd04abbd43eac1fb3e4fca7495a078bcb8d33cb765fe71ad7e473d9c94d98fd67adca63bd2716c815a2da066198dd37217
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
   languageName: node
   linkType: hard
 

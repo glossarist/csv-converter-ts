@@ -7,7 +7,8 @@ import {TaskList, Task} from 'ink-task-list';
 import getConfig from './config';
 import Configuration from './Configuration';
 import type {ReportingOpts} from './ReportingFunction';
-import processItems from './reader';
+import processItems from './processItems';
+import ensureMeta from './ensureMeta';
 
 const ensureRepoDirectory = async function (
   _: ReportingOpts,
@@ -38,6 +39,7 @@ interface Step {
 }
 const STEP_SEQUENCE = [
   'ensuredir',
+  'ensuremeta',
   'countitems',
   'processitems',
   'initializepaneronmeta',
@@ -64,6 +66,10 @@ const App: React.FC<Record<never, never>> = function () {
   const [steps, setSteps] = useState<StepConfiguration>({
     ensuredir: {
       label: 'creating output directory',
+      state: 'pending',
+    },
+    ensuremeta: {
+      label: 'adding Paneron repository & dataset meta',
       state: 'pending',
     },
     countitems: {
@@ -128,16 +134,26 @@ const App: React.FC<Record<never, never>> = function () {
         config.glossaryID
       );
       if (repoPath) {
-        const itemCount = await completeStep(
-          'countitems',
-          countItems
-        )(config.inputCSVPath);
-        if (itemCount) {
-          await completeStep('processitems', processItems)(
-            config.inputCSVPath,
-            repoPath,
-            itemCount
-          );
+        const paths = await completeStep('ensuremeta', ensureMeta)(
+          repoPath,
+          config.glossaryID,
+          config.langCode,
+          config.domainName
+        );
+        if (paths) {
+          const itemCount = await completeStep(
+            'countitems',
+            countItems
+          )(config.inputCSVPath);
+          if (itemCount) {
+            await completeStep('processitems', processItems)(
+              config.inputCSVPath,
+              paths[0],
+              paths[1],
+              config.langCode,
+              itemCount
+            );
+          }
         }
       }
     })();
