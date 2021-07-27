@@ -21,7 +21,7 @@ invoke the script as follows:
 
 [source,console]
 --
-% node csv -l <language_code> -i <glossary_id> -u <glossary_url> </path/to/file.csv> -o </repository/container/directory>
+% npx glossarist-csv-converter -l <language_code> -i <glossary_id> -d <domain_name> </path/to/file.csv> -o </repository/container/directory>
 --
 
 Where:
