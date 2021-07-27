@@ -1,6 +1,8 @@
 {
   "name": "@riboseinc/glossarist-csv-converter",
   "packageManager": "yarn@3.0.0",
+  "main": "src/index.tsx",
+  "bin": "build/src/index.js",
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
