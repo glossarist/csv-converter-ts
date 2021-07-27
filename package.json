@@ -1,7 +1,7 @@
 {
   "name": "@riboseinc/glossarist-csv-converter",
   "packageManager": "yarn@3.0.0",
-  "main": "src/index.tsx",
+  "main": "build/src/index.js",
   "bin": "build/src/index.js",
   "author": "Ribose Inc. <open.source@ribose.com>",
   "version": "0.0.1",
