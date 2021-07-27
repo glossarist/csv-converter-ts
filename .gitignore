@@ -11,3 +11,5 @@
 
 # We’re not using zero-installs, and we’re versioning yarn.lock, so
 node_modules
+
+build
