@@ -5,6 +5,9 @@ from a CSV file with terminological data.
 
 Requires Node 15, NPM.
 
+The repository also includes scaffolding for building a static site from the glossary,
+and a GHA workflow for deploying the site to AWS S3 + CF infrastructure (see the Deployment section).
+
 == Usage
 
 === Generating data
@@ -82,9 +85,22 @@ The fields are as follows:
 . Term 3 participle marker (adjectives and adverbs only): non-empty value for “true”
 . Term 3 abbreviation marker: non-empty value for “true”
 
+== Deployment
+
+This requires you to have an S3 bucket associated with a CloudFront distribution,
+which in turn is associated with a domain name.
+
+Provided the following variables are specified in Github repository secrets,
+the GHA workflow provided should deploy the site automatically:
+
+- DOMAIN_NAME
+- AWS_REGION
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- CLOUDFRONT_DISTRIBUTION_ID
+- S3_BUCKET_NAME
+
 == Roadmap
 
 . Explain how to load the created dataset in Paneron
-. Include a Github Actions workflow that builds the site and deploys it at specified domain name,
-given preconfigured infrastructure
 . Render static HTML site locally

@@ -9,6 +9,7 @@ import Configuration from './Configuration';
 import type {ReportingOpts} from './ReportingFunction';
 import processItems from './processItems';
 import ensureMeta from './ensureMeta';
+import installSiteScaffolding from './installSiteScaffolding';
 
 const ensureRepoDirectory = async function (
   _: ReportingOpts,
@@ -34,6 +35,7 @@ const STEP_SEQUENCE = [
   'ensuredir',
   'ensuremeta',
   'processitems',
+  'installsitescaffolding',
 ] as const;
 
 type StepID = typeof STEP_SEQUENCE[number];
@@ -64,6 +66,10 @@ const App: React.FC<Record<never, never>> = function () {
     },
     processitems: {
       label: 'processing CSV data',
+      state: 'pending',
+    },
+    installsitescaffolding: {
+      label: 'installing scaffolding for static site generation',
       state: 'pending',
     },
   });
@@ -123,8 +129,12 @@ const App: React.FC<Record<never, never>> = function () {
             config.inputCSVPath,
             paths[0],
             paths[1],
-            config.langCode,
+            config.langCode
           );
+          await completeStep(
+            'installsitescaffolding',
+            installSiteScaffolding
+          )(repoPath);
         }
       }
     })();
