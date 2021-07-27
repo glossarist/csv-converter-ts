@@ -27,6 +27,8 @@ invoke the script as follows:
 Where:
 
 . Language code is expected to be a three-letter ISO 639-2/T code (“eng” for English).
+. Repository root will be created at `/repository/container/directory/glossary_id`; it must not exist
+(but container directory must)
 . Glossary ID can be a descriptive alphanumeric string without spaces.
 . Domain name at which the glossary will be deployed.
 Note that the glossary must be deployed at domain root currently.
