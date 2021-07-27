@@ -1,0 +1,82 @@
+= Glossarist CSV conversion script in TypeScript
+
+Initializes a Paneron repository with a Glossarist dataset
+from a CSV file with terminological data.
+
+The repository also contains GHA workflow for rendering the glossary
+as a website.
+
+Requires Node 15, NPM.
+
+Publishing the website requires you to have a domain name associated
+with an AWS CloudFront distribution,
+which in turn is associated with a static-site-serving S3 bucket.
+
+== Usage
+
+=== Generating data
+
+Assuming you have the CSV ready (see CSV structure below),
+invoke the script as follows:
+
+[source,console]
+--
+% node csv -l <language_code> -i <glossary_id> -u <glossary_url> </path/to/file.csv> -o </repository/container/directory>
+--
+
+Where:
+
+. Language code is expected to be a three-letter ISO 639-2/T code (“eng” for English).
+. Glossary ID can be a descriptive alphanumeric string without spaces.
+. Glossary URL is a full URL (e.g., `https://some-glossary.com/`) where the glossary will be deployed.
+Note that the glossary must be deployed at domain root currently.
+
+=== Preparing the infrastructure
+
+Create a blank Github repository with the following variables specified:
+
+. S3 bucket: VARIABLE_NAME
+. CloudFront distribution: VARIABLE_NAME
+. Domain (should match the one in `glossary_url` above): VARIABLE_NAME
+. …
+
+=== Pushing repository
+
+After navigating to `/repository/container/directory/glossary_id`,
+initialize local repository, assign Github repository as a remote, and push:
+
+[source,console]
+--
+% git init
+% git commit -m "Initial commit"
+% git branch -M main
+% git remote add origin "<your Github origin URL>"
+% git push
+--
+
+Github Actions should take care of deploying the website.
+
+== CSV structure
+
+The fields are as follows:
+
+. Human-readable identifier (required): a string
+. Date accepted
+. Definition: plain text, with possible AsciiMath
+. Note 1: plain text, with possible AsciiMath
+. Note 2: plain text, with possible AsciiMath
+. Note 3: plain text, with possible AsciiMath
+. Example 1: plain text, with possible AsciiMath
+. Example 2: plain text, with possible AsciiMath
+. Example 3: plain text, with possible AsciiMath
+. Authoritative source: reference to a standard (e.g., "ITU-R Recommendation 592")
+. Authoritative source: clause in the standard referenced (e.g., "4.4")
+. Authoritative source: link (URL) to the standard referenced
+. Designation 1 rendered as text
+. Designation 1 type: expression | symbol | prefix
+. Designation 1 part of speech (expressions only): noun | adjective | adverb | verb
+. Designation 1 grammatical number (nouns only): plural | singular | mass
+. Designation 1 gender (nouns only): masculine | feminine | common | neuter
+. Designation 1 participle marker (adjectives and adverbs only): participle (or empty)
+
+Designations 2, 3 will be treated as synonym terms.
