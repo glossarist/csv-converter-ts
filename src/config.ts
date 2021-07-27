@@ -63,7 +63,7 @@ export default function getConfig(): [
   if (config.langCode.length !== 3) {
     errs.langCode.push('must be a three-letter language code');
   }
-  if (config.glossaryID.length !== 3) {
+  if (config.glossaryID === '') {
     errs.glossaryID.push('must not be empty');
   }
   return [config, errs];
