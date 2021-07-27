@@ -45,6 +45,19 @@ initialize local repository, assign Github repository as a remote, and push:
 % git push
 --
 
+=== Building site locally
+
+After navigating to `/repository/container/directory/glossary_id`,
+install dependencies and build the site, after which you can serve it locally:
+
+[source,console]
+--
+% yarn
+% yarn build
+% cd dist
+% python3 -m http.server 8000
+--
+
 == CSV structure
 
 NOTE: For a sample file, refer to `sample/glossary.csv`.
