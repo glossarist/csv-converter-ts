@@ -109,7 +109,7 @@ __metadata:
   dependencies:
     "@types/js-yaml": ^4.0.2
     "@types/node": ^14.11.2
-    "@types/react": ^17.0.15
+    "@types/react": ^16.9
     "@types/uuid": ^8.3.1
     csv-parser: ^3.0.0
     date-fns: ^2.23.0
@@ -119,7 +119,7 @@ __metadata:
     ink-task-list: ^1.1.0
     js-yaml: ^4.1.0
     minimist: ^1.2.5
-    react: ^17.0.2
+    react: ^16.9
     typescript: ^4.0.3
     uuid: ^8.3.2
   bin:
@@ -201,14 +201,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.15":
-  version: 17.0.15
-  resolution: "@types/react@npm:17.0.15"
+"@types/react@npm:^16.9":
+  version: 16.14.11
+  resolution: "@types/react@npm:16.14.11"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 4ee41e0c8d0e938f501f80ac75a5ee70b5e8cd5968a1f764960bf7b2694fd0d8ca01345f00325617130643b4af6e072bb3ade023dbc2bd2db7e73504b355b8d9
+  checksum: 090a48b395a328dbd3d5cf2a5095d268324518b43ceb10a76dc285d0fb365425b35470ff08cd0656cf4b194de77eb26e66e2c82c23d12be311e433b0348e3f17
   languageName: node
   linkType: hard
 
@@ -2469,13 +2469,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
+"react@npm:^16.9":
+  version: 16.14.0
+  resolution: "react@npm:16.14.0"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+    prop-types: ^15.6.2
+  checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
   languageName: node
   linkType: hard
 
