@@ -58,6 +58,8 @@ Github Actions should take care of deploying the website.
 
 == CSV structure
 
+NOTE: For a sample file, refer to `sample/glossary.csv`.
+
 The fields are as follows:
 
 . Human-readable identifier (required): a string
