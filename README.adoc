@@ -116,4 +116,4 @@ the GHA workflow provided should deploy the site automatically:
 == Roadmap
 
 . Explain how to load the created dataset in Paneron
-. Render static HTML site locally
+. Render static HTML site locally without manual intervention
