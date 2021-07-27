@@ -48,7 +48,7 @@ initialize local repository, assign Github repository as a remote, and push:
 [source,console]
 --
 % git init
-% git commit -m "Initial commit"
+% git commit -m "Initial migration complete"
 % git branch -M main
 % git remote add origin "<your Github origin URL>"
 % git push
