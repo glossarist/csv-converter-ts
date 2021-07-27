@@ -1,3 +1,4 @@
+import fs from 'fs';
 import minimist from 'minimist';
 
 // interface RawArguments {
@@ -33,11 +34,11 @@ export default function getConfig(): [
 ] {
   const args = minimist(process.argv.slice(2));
   const config: Configuration = {
-    inputCSVPath: (args['_'] ?? [])[0]?.trim?.() ?? '',
-    outDirectoryPath: args.o?.trim?.() ?? '',
-    langCode: args.l?.trim?.() ?? '',
-    glossaryID: args.i?.trim?.() ?? '',
-    domainName: args.d?.trim?.() ?? '',
+    inputCSVPath: (args['_'] ?? [])[0]?.toString?.().trim?.() ?? '',
+    outDirectoryPath: args.o?.toString?.().trim?.() ?? '',
+    langCode: args.l?.toString?.().trim?.() ?? '',
+    glossaryID: args.i?.toString?.().trim?.() ?? '',
+    domainName: args.d?.toString?.().trim?.() ?? '',
   };
   const errs: Record<keyof Configuration, string[]> = {
     inputCSVPath: [],
@@ -48,6 +49,13 @@ export default function getConfig(): [
   };
   if (config.inputCSVPath === '') {
     errs.inputCSVPath.push('must not be empty');
+  }
+  try {
+    if (!fs.statSync(config.inputCSVPath).isFile()) {
+      errs.inputCSVPath.push('must be a file');
+    }
+  } catch (e) {
+    errs.inputCSVPath.push('must be an existing file');
   }
   if (config.outDirectoryPath === '') {
     errs.outDirectoryPath.push('must not be empty');
