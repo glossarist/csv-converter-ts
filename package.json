@@ -1,6 +1,7 @@
 {
   "name": "glossarist-csv-converter",
   "packageManager": "yarn@3.0.0",
+  "license": "MIT",
   "dependencies": {
     "csv-parser": "^3.0.0",
     "ink": "^3.0.9",
